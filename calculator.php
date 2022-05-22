@@ -29,10 +29,6 @@ function calculate1(float $num1,string $opp,float $num2): float{
         case '/': return div ($num1,$num2);
     }
 }
-echo calculate1(1,'+',2)."<br/>";
-echo calculate1(1,'-',2)."<br/>";
-echo calculate1(1 ,'*',2)."<br/>";
-echo calculate1 ( 1 ,'/',2)."<br/>";
 function calculate2(float $num1,string $opp,float $num2): float{
     if (!in_array($opp, ['+','-','*','/'])) {
         return 0;
@@ -43,6 +39,11 @@ function calculate2(float $num1,string $opp,float $num2): float{
 '/' => 'div' ];
     return $function_name [$opp]($num1, $num2);
 }
+echo calculate1(1,'+',2)."<br/>";
+echo calculate1(1,'-',2)."<br/>";
+echo calculate1(1 ,'*',2)."<br/>";
+echo calculate1 ( 1 ,'/',2)."<br/>";
+
 
 
 

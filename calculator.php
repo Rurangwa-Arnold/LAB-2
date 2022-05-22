@@ -18,15 +18,15 @@ echo sum (10,2)."<br/>";
 echo diff (10,2). "<br/>"; ;
 echo div (10,2). "<br/>";
 echo multiply (10,2). "<br/>";
-function operator(float $num1,string $opp,float $num2): float{
+function operators(float $num1,string $opp,float $num2): float{
     if (!in_array($opp, ['+','-','*','/'])) {
         return 0;
     }
-    $function_name =['+' => 'sum',
+    $function_oprator =['+' => 'sum',
 '-' => 'diff',
 '*' => 'multply',
 '/' => 'div' ];
-    return $function_name [$opp]($num1, $num2);
+    return $function_oprator[$opp]($num1, $num2);
 }
 function calculate(float $num1,string $opp,float $num2){
     if(!($opp == '+' or $opp == '-' or $opp == '/' or $opp == '*')){

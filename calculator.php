@@ -13,12 +13,22 @@ function multiply(float $num1,float $num2): float {
     return $num1 * $num2;
 }
 
+
 echo sum (10,2)."<br/>";
 echo diff (10,2). "<br/>"; ;
 echo div (10,2). "<br/>";
 echo multiply (10,2). "<br/>";
-
-function calculate1(float $num1,string $opp,float $num2): float{
+function operator(float $num1,string $opp,float $num2): float{
+    if (!in_array($opp, ['+','-','*','/'])) {
+        return 0;
+    }
+    $function_name =['+' => 'sum',
+'-' => 'diff',
+'*' => 'multply',
+'/' => 'div' ];
+    return $function_name [$opp]($num1, $num2);
+}
+function calculate(float $num1,string $opp,float $num2){
     if(!($opp == '+' or $opp == '-' or $opp == '/' or $opp == '*')){
         return 0;
     }
@@ -29,20 +39,10 @@ function calculate1(float $num1,string $opp,float $num2): float{
         case '/': return div ($num1,$num2);
     }
 }
-function calculate2(float $num1,string $opp,float $num2): float{
-    if (!in_array($opp, ['+','-','*','/'])) {
-        return 0;
-    }
-    $function_name =['+' => 'sum',
-'-' => 'diff',
-'*' => 'multply',
-'/' => 'div' ];
-    return $function_name [$opp]($num1, $num2);
-}
-echo calculate1(1,'+',2)."<br/>";
-echo calculate1(1,'-',2)."<br/>";
-echo calculate1(1 ,'*',2)."<br/>";
-echo calculate1 ( 1 ,'/',2)."<br/>";
+echo calculate(1,'+',2)."<br/>";
+echo calculate(1,'-',2)."<br/>";
+echo calculate(1 ,'*',2)."<br/>";
+echo calculate( 1 ,'/',2)."<br/>";
 
 
 

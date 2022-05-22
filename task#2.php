@@ -1,13 +1,12 @@
 <?php
-function task(string $text): void{
-echo $text;
+function me(string $test):void {
+    echo $test;
 }
-task("parameter:");
-function repeatcontent(int $count=1):void{
-for ($i=0; $i <= $count; $i++) {
-task(" Happy world!");
+ me("parameter:");
+ function word(int $count):void {
+for ($i = 0; $i < $count; $i++) {
+word($i="Happy Wrold");
 }
-}
-
-repeatcontent();
-repeatcontent(5);
+ }
+ word($count);
+ word(5);

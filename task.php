@@ -7,7 +7,7 @@ function word(int $count):void{
     if($count == 0) {
     return ;
 }
-me('parameters:'.$count);
+me(' -------- HELLO WORLD -------   ');
 word(--$count);
 }
 word(5);
